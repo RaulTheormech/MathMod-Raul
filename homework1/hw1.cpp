@@ -19,7 +19,7 @@ double get_y(ifstream& input_file) {
 	double y;
 	string ystr;
 
-	input_file >> ws >> ystr;
+	input_file >> ystr;
 	y = stod(ystr);
 
 	return y;
