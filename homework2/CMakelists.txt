@@ -1,1 +1,1 @@
-add_executable(homework 2 hw2.cpp)
+add_executable(homework2 main.cpp)
