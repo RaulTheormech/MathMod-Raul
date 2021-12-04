@@ -1,1 +1,1 @@
-add_executable(homework2 main.cpp mat_point.pro)
+add_executable(homework2 main.cpp)
