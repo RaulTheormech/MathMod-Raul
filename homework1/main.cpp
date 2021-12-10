@@ -25,7 +25,7 @@ int main(int argc, char **argv) {
     int left = 0, right = 0;
     float min_left_cos = 1, min_right_cos = 1;
     float len_v = std::sqrt(xn * xn + yx * yx);
-    float cos_alpha = xn / len_v, sin_alpha = yx / len_v;
+    float cos_alpha = yx / len_v, sin_alpha = xn / len_v;
 
     for (int i = 0; i < coord_x.size(); ++i) {
       float new_x = cos_alpha * coord_x[i] + sin_alpha * coord_y[i];
