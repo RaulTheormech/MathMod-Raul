@@ -47,7 +47,7 @@ int main(int argc, char **argv) {
         }
       }
     }
-    std::cout << "Case 1" << std::endl;
+    // std::cout << "Case 1" << std::endl;
     std::cout << "Leftmost: " << coord_x[left] << " " << coord_y[left] << std::endl;
     std::cout << "Rightmost: " << coord_x[right] << " " << coord_y[right] <<
               std::endl;
