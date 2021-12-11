@@ -72,5 +72,4 @@ int main() {
 	cout << "Leftmost: " << leftx << " " << lefty << "\n" << "Rightmost: " << rightx << " " << righty << endl;
 	file.close();
 	return 0;
-	// Победа на классе uwu
 }
