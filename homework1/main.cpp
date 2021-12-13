@@ -9,7 +9,7 @@ using namespace std;
 int main(int argc, char **argv) {
   if(argc == 2) {
     fstream myfile(argv[1]);
-    if (myfile.is_open()) { //проверка открытия файла
+    //if (myfile.is_open()) { //проверка открытия файла
       float xn, yx;
       myfile >> xn;
       myfile >> yx;
@@ -51,7 +51,7 @@ int main(int argc, char **argv) {
       }
       cout << "Leftmost: " << coord_x[left] << " " << coord_y[left] << endl;
       cout << "Rightmost: " << coord_x[right] << " " << coord_y[right] << endl;
-    } 
+    //} 
   } 
   return 0;
 }
