@@ -6,9 +6,10 @@
 
 using namespace std;
 
-int main(int argc, char **argv) {
-  if(argc == 2) {
-    fstream myfile(argv[1]);
+//int main(int argc, char **argv) {
+  //if(argc == 2) {
+int main() {
+    ifstream &myfile();
     //if (myfile.is_open()) { //проверка открытия файла
       float xn, yx;
       myfile >> xn;
@@ -20,7 +21,7 @@ int main(int argc, char **argv) {
         coord_x.push_back(temp_coord);
         myfile >> temp_coord;
         coord_y.push_back(temp_coord);
-      }
+      //}
       myfile.close();
 
       // вариант 1
