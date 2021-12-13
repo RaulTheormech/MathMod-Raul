@@ -48,10 +48,10 @@ int main(int argc, char **argv) {
             right = i;
           }
         }
-      }
+      //}
       cout << "Leftmost: " << coord_x[left] << " " << coord_y[left] << endl;
       cout << "Rightmost: " << coord_x[right] << " " << coord_y[right] << endl;
-    //} 
+    } 
   } 
   return 0;
 }
