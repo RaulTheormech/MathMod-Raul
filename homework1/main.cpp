@@ -6,11 +6,10 @@
 
 using namespace std;
 
-//int main(int argc, char **argv) {
-  //if(argc == 2) {
-int main() {
+int main(int argc, char **argv) {
+  if(argc == 2) {
     ifstream &myfile();
-    //if (myfile.is_open()) { //проверка открытия файла
+    if (myfile.is_open()) { //проверка открытия файла
       float xn, yx;
       myfile >> xn;
       myfile >> yx;
@@ -21,9 +20,10 @@ int main() {
         coord_x.push_back(temp_coord);
         myfile >> temp_coord;
         coord_y.push_back(temp_coord);
-      //}
+      }
       myfile.close();
-
+      }
+  
       // вариант 1
       int left = 0, right = 0;
       float min_left_cos = 1, min_right_cos = 1;
