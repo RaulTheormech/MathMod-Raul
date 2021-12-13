@@ -14,8 +14,8 @@ int main(int argc, char **argv) {
       myfile >> xn;
       myfile >> yx;
       float temp_coord;
-      std::vector<float> coord_x; // координаты точек
-      std::vector<float> coord_y;
+      vector<float> coord_x; // координаты точек
+      vector<float> coord_y;
       while (myfile >> temp_coord) {
         coord_x.push_back(temp_coord);
         myfile >> temp_coord;
@@ -49,8 +49,8 @@ int main(int argc, char **argv) {
           }
         }
       }
-      std::cout << "Leftmost: " << coord_x[left] << " " << coord_y[left] << std::endl;
-      std::cout << "Rightmost: " << coord_x[right] << " " << coord_y[right] << std::endl;
+      cout << "Leftmost: " << coord_x[left] << " " << coord_y[left] << endl;
+      cout << "Rightmost: " << coord_x[right] << " " << coord_y[right] << endl;
     } 
   } 
   return 0;
