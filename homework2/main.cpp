@@ -80,7 +80,7 @@ int main(int argc, char **argv) {
       myfile.close();
 
       int idx = traectories(0, h0, dx, dy, 0, coord_x, coord_y);
-      std::cout << idx;
+      std::cout << idx + 1;
 
 //      // переходим к расчету
 //      float hi = h0;
