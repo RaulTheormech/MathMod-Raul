@@ -5,6 +5,10 @@
 
 using namespace std;
 
+float len_vector(float x, float y) {
+  return std::sqrt(x * x + y * y );
+};
+
 int main(int argc, char **argv) {
   fstream myfile("in.txt");
   if (myfile.is_open()) { //проверка открытия файла
@@ -22,7 +26,7 @@ int main(int argc, char **argv) {
     myfile.close();
 
     // вариант 1
-    int left = 0, right = 0;
+    int left = -1, right = -1;
     float min_left_cos = 1, min_right_cos = 1;
     float len_v = std::sqrt(xn * xn + yx * yx);
     float cos_alpha = xn / len_v, sin_alpha = yx / len_v;
@@ -34,22 +38,35 @@ int main(int argc, char **argv) {
       float prod_dot = new_x * 1 + new_y * 0;
       float len_p = std::sqrt(new_x * new_x + new_y * new_y);
       float cos = prod_dot / 1 / len_p;
+
       if (new_y > 0) { //слева
-        if (cos < min_left_cos) {
+        if (cos <= min_left_cos) {
           min_left_cos = cos;
           left = i;
         }
       }
+
       if (new_y <= 0) { // справа
-        if (cos < min_right_cos) {
+        if (cos <= min_right_cos) {
+//          if (len_vector(coord_x[right], coord_y[right]) > len_p) {
+//            right = i;
+//          }
           min_right_cos = cos;
           right = i;
         }
       }
     }
-    std::cout << "Leftmost: " << coord_x[left] << " " << coord_y[left] << std::endl;
-    std::cout << "Rightmost: " << coord_x[right] << " " << coord_y[right] <<
-              std::endl;
+    if (left != -1) {
+      std::cout << "Leftmost: " << coord_x[left] << " " << coord_y[left] << std::endl;
+    } else {
+      std::cout << "Leftmost: " << 0 << " " << 0 << std::endl;
+    }
+    if (right != -1) {
+      std::cout << "Rightmost: " << coord_x[right] << " " << coord_y[right] <<
+                std::endl;
+    } else {
+      std::cout << "Rightmost: " << 0 << " " << 0 << std::endl;
+    }
 
 //      // вариант 2
 //      float max_left = 0, max_right = 0;
