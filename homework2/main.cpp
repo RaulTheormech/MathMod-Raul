@@ -90,14 +90,14 @@ int main(int argc, char **argv) {
         ti = coord_x[i] / dx;
         hi = -0.5 * g * ti * ti + dy * ti + h0;
         if (hi < coord_y[i] || hi <= 0) {
-//          std::cout << "mat. the point will land on the site " << i - 1 << std::endl;
+//          std::cout << i - 1 << std::endl;
           std::cout << i << std::endl;
           is_find = true;
           break;
         }
       }
       if (is_find != true) {
-        std::cout << "mat. the point will land on the site " << coord_x.size()
+        std::cout << coord_x.size()
                   << std::endl;
       }
 
