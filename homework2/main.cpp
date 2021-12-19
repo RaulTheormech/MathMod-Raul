@@ -16,15 +16,15 @@ int traectories(float x_0, float h_0, float vx0, float vy0,
     float hi = -0.5 * g * ti * ti + vy0 * ti + h_0;
 
     if (hi <= 0) {
-      return start_idx - 1;
+      return start_idx;
     } else if (coord_y[new_idx] >= hi) {
       float vxi = -vx0;
       float vyi = -g * ti + vy0;
       return traectories(xi, hi, vxi, vyi, new_idx, coord_x, coord_y);
     } else {
-     // if (new_idx >= coord_x.size() - 1) {
-      //  return new_idx;
-     // }
+      if (new_idx >= coord_x.size() - 1) {
+        return new_idx;
+      }
       float vxi = vx0;
       float vyi = -g * ti + vy0;
       return traectories(xi, hi, vxi, vyi, new_idx, coord_x, coord_y);
