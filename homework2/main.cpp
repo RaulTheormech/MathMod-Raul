@@ -97,7 +97,7 @@ int main(int argc, char **argv) {
         }
       }
       if (is_find != true) {
-        std::cout << coord_x.size() << std::endl;
+        std::cout << coord_x.size() - 1 << std::endl;
       }
 
     } else {
