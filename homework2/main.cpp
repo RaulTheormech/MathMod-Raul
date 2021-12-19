@@ -80,9 +80,9 @@ int main(int argc, char **argv) {
       }
       myfile.close();
       
-      if (coord_x.size() <= 1) {
-       return -1; 
-      }
+      //if (coord_x.size() <= 1) {
+       return 0; 
+      //}
       int idx = traectories(0, h0, dx, dy, 0, coord_x, coord_y);
       std::cout << idx;
 
