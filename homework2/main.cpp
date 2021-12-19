@@ -80,26 +80,26 @@ int main(int argc, char **argv) {
       }
       myfile.close();
 
-      int idx = traectories(0, h0, dx, dy, 0, coord_x, coord_y);
-      std::cout << idx;
+      //int idx = traectories(0, h0, dx, dy, 0, coord_x, coord_y);
+      //std::cout << idx;
 
       // переходим к расчету
-    //  float hi = h0;
-   //   float ti = 0;
-   //   bool is_find = false;
-   //   for (int i = 0; i < coord_x.size(); ++i) {
-   //     ti = coord_x[i] / dx;
-    //    hi = -0.5 * g * ti * ti + dy * ti + h0;
-    //    if (hi < coord_y[i] || hi <= 0) {
+      float hi = h0;
+      float ti = 0;
+      bool is_find = false;
+      for (int i = 0; i < coord_x.size(); ++i) {
+        ti = coord_x[i] / dx;
+        hi = -0.5 * g * ti * ti + dy * ti + h0;
+        if (hi < coord_y[i] || hi <= 0) {
 //          std::cout << "mat. the point will land on the site " << i - 1 << std::endl;
-    //      std::cout << i - 1 << std::endl;
-   //       is_find = true;
-  //        break;
- //       }
- //     }
-//      if (is_find != true) {
-//        std::cout << coord_x.size() - 1 << std::endl;
-//      }
+          std::cout << i - 1 << std::endl;
+          is_find = true;
+          break;
+        }
+      }
+      if (is_find != true) {
+        std::cout << coord_x.size() - 1 << std::endl;
+      }
 
     } else {
       std::cout << "Unable to open file" << std::endl;
