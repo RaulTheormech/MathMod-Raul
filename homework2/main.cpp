@@ -17,7 +17,7 @@ int traectories(float x_0, float h_0, float vx0, float vy0,
 
     if (hi <= 0) {
       return start_idx;
-    } else if (coord_y[new_idx] > hi) {
+    } else if (coord_y[new_idx] >= hi) {
       float vxi = -vx0;
       float vyi = -g * ti + vy0;
       return traectories(xi, hi, vxi, vyi, new_idx, coord_x, coord_y);
@@ -84,7 +84,7 @@ int main(int argc, char **argv) {
       //std::cout << idx;
 
       // переходим к расчету
-      float hi = h0;
+      /*float hi = h0;
       float ti = 0;
       bool is_find = false;
       for (int i = 0; i < coord_x.size(); ++i) {
@@ -98,8 +98,8 @@ int main(int argc, char **argv) {
         }
       }
       if (is_find != true) {
-        std::cout << coord_x.size() << std::endl;
-      }
+        std::cout << coord_x.size() - 1 << std::endl;
+      } */
 
     } else {
       std::cout << "Unable to open file" << std::endl;
