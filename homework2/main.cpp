@@ -98,8 +98,8 @@ int main(int argc, char **argv) {
         }
       }
       if (is_find != true) {
-        if (coord_x.size() - 1 < 0) {
-          return 0;
+        if (coord_x.size() - 1 == 0) {
+          return 1;
         }
         std::cout << coord_x.size() - 1 << std::endl;
       } 
