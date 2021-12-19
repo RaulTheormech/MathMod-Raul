@@ -49,6 +49,7 @@ int traectories(float x_0, float h_0, float vx0, float vy0,
       return traectories(xi, hi, vxi, vyi, new_idx, coord_x, coord_y);
     }
   }
+  return start_idx;
 }
 
 int main(int argc, char **argv) {
