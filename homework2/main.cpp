@@ -9,7 +9,7 @@ int traectories(float x_0, float h_0, float vx0, float vy0,
                 int start_idx,
                 const std::vector<float> &coord_x,
                 const std::vector<float> &coord_y) {
-  if (vx0 >= 0) {
+  if (vx0 > 0) {
     int new_idx = start_idx + 1;
     float xi = coord_x[new_idx];
     float ti = (xi - x_0) / vx0;
@@ -31,7 +31,7 @@ int traectories(float x_0, float h_0, float vx0, float vy0,
     }
   }
 
-  if (vx0 < 0) {
+  if (vx0 <= 0) {
     int new_idx = start_idx - 1;
     float xi = coord_x[new_idx];
     float ti = (xi - x_0) / vx0;
