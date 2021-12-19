@@ -79,12 +79,15 @@ int main(int argc, char **argv) {
         ++i;
       }
       myfile.close();
-
-      //int idx = traectories(0, h0, dx, dy, 0, coord_x, coord_y);
-      //std::cout << idx;
+      
+      if (coord_x.size() == 1) {
+       return 0; 
+      }
+      int idx = traectories(0, h0, dx, dy, 0, coord_x, coord_y);
+      std::cout << idx;
 
       // переходим к расчету
-      float hi = h0;
+      /*float hi = h0;
       float ti = 0;
       bool is_find = false;
       for (int i = 0; i < coord_x.size(); ++i) {
@@ -99,10 +102,10 @@ int main(int argc, char **argv) {
       }
       if (is_find != true) {
         if (coord_x.size() - 1 == 0) {
-          return 1;
+          return 0;
         }
         std::cout << coord_x.size() - 1 << std::endl;
-      } 
+      }  */
 
     } else {
       std::cout << "Unable to open file" << std::endl;
