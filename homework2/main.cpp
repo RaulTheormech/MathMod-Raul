@@ -89,7 +89,7 @@ int main(int argc, char **argv) {
       for (int i = 0; i < coord_x.size(); ++i) {
         ti = coord_x[i] / dx;
         hi = -0.5 * g * ti * ti + dy * ti + h0;
-        if (hi < coord_y[i] || hi <= 0) {
+        if (hi <= coord_y[i] || hi <= 0) {
 //          std::cout << "mat. the point will land on the site " << i - 1 << std::endl;
           std::cout << i - 1 << std::endl;
           is_find = true;
