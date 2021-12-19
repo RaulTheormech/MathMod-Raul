@@ -17,7 +17,7 @@ int traectories(float x_0, float h_0, float vx0, float vy0,
 
     if (hi <= 0) {
       return start_idx;
-    } else if (coord_y[new_idx] >= hi) {
+    } else if (coord_y[new_idx] > hi) {
       float vxi = -vx0;
       float vyi = -g * ti + vy0;
       return traectories(xi, hi, vxi, vyi, new_idx, coord_x, coord_y);
