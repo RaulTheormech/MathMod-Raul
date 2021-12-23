@@ -1,1 +1,1 @@
-add_executable(homework1 main.cpp vects.pro)
+add_executable(homework1 main.cpp)
